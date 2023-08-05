@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G10ELS.me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10.1.0/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Boxicons css -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <script src="jquery-3.7.0.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+    background-color: #EFEFEF;
+}
+
+.terms-container {
+    position: fixed;
+    min-height: 100vh;
+    left: 30%;
+    top: 10%;
+    z-index: 2;
+}
+
+.terms-box {
+    max-width: 460px;
+    background-color: greenyellow;
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    padding: 60px 30px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.terms-text {
+    padding: 0 20px;
+    height: 400px;
+    overflow-y: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    z-index: 2;
+}
+
+.terms-text::-webkit-scrollbar {
+    width: 2px;
+    background-color: #282828;
+    z-index: 2;
+}
+
+.terms-text::-webkit-scrollbar-thumb {
+    background-color: #0044ff;
+    z-index: 2;
+}
+
+.terms-text h2 {
+    text-transform: uppercase;
+    color: #0044ff;
+    z-index: 2;
+}
+
+.terms-box h4 {
+    font-size: 13px;
+    text-align: center; 
+    padding: 0 40px;
+    z-index: 2;
+}
+
+.terms-box h4 span {
+    color: #0044ff;
+    z-index: 2;
+}
+
+.buttons {
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.btn {
+    height: 50px;
+    width: calc(50% - 6px);
+    border: 0;
+    border-radius: 6px;
+    font-size: 19px;
+    font-weight: 500;
+    color: #FFF;
+    transition: .3s linear;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.blue-btn {
+    background-color: #0044ff;
+    z-index: 2;
+}
+
+.gray-btn {
+    background-color: #282828;
+    z-index: 2;
+}
+
+.btn:hover {
+    opacity: .6;
+    z-index: 2;
+}
+
+.cookie {
+    background: #4070f4;
+    font-family: 'Poppins', sans-serif;
+    z-index: 2;
+}
+
+.wrapper {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    max-width: 345px;
+    width: 100%;
+    background: greenyellow;
+    border-radius: 8px;
+    padding: 15px 25px 22px;
+    transition: right 0.3s ease;
+    z-index: 2;
+}
+
+.wrapper .show {
+    right: 20px;
+    z-index: 2;
+}
+
+.wrapper header {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    z-index: 2;
+}
+
+header i {
+    color: #4070f4;
+    font-size: 32px;
+    z-index: 2;
+}
+
+header h2 {
+    color: #4070f4;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.wrapper .data {
+    margin-top: 16px;
+    z-index: 2;
+}
+
+.wrapper .data p {
+    color: #333;
+    font-size: 16px;
+    z-index: 2;
+}
+
+.data p a {
+    color: #4070f4;
+    text-decoration: none;
+    z-index: 2;
+}
+
+.data p a:hover {
+    text-decoration: underline;
+    z-index: 2;
+}
+
+.wrapper .but-cookies {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+.but-cookies .but-cookie {
+    background: greenyellow;
+    border: none;
+    color: #4070f4;
+    padding: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    width: calc(100% / 2 - 10px);
+    transition: all 0.2s ease;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.but-cookies .but-cookie:hover {
+    width: 110%;
+    color: #0044ff;
+    z-index: 2;
+}
+
+.logo {
+    margin: 0;
+    padding-left: 0;
+}
+
+.view {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.view img {
+    display: block;
+    border-radius: 30px;
+    transform: scale(.7);
+    transition: all .2s linear;
+}
+
+.view img:hover {
+    transform: scale(.9);
+}
+
+.panel{
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    background: #EFEFEF;
+    position: relative;
+    z-index: -1;
+    color: #000;
+    }
+
+.container-2{
+    width: 100%;
+    max-width: 1130px;
+    }
+
+.intro{
+    font-size: 20px;font-weight: bold;
+    color: #000;
+    padding: 5%;
+    }
+
+.title-big{
+    font-size: 5rem;
+    padding-left: 5%;
+    margin-top: -50px;
+    }
+
+.fade-in{transform: translateY(10vh); transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);}
+.fade-in.in-page{opacity: 1; transform: translateY(0vh);}
+
+.img-big-left {
+    float: right;
+    width: 47%;
+    margin-right: -18%;
+    margin-top: -80px;
+    }
+
+#button {
+    width: 170px;
+    height: 60px;
+    background-color:greenyellow;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100px;
+    margin-left: 35px;
+    margin-top: 5px;
+}
+
+#button *{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#button a {
+    color: dodgerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#button div {
+    background-color: dodgerblue;
+    transform: translateX(-170px);
+    transition: all 0.2s ease-in-out;
+}
+
+#button:hover div {
+    transform: translateX(0);
+}
+
+#button:hover a {
+    color: greenyellow;
+}
+
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@3');
+
+.contenitore {
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1240px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFEFEF;
+    float: left;
+
+}
+
+.slide-container {
+    max-width: 1240px;
+    width: 100%;
+    padding: 40px 0;
+}
+.slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.card {
+    width: 320px;
+    border-radius: 25px;
+    background-color: #FFF;
+}
+
+.image-content,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4070f4;
+    border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070f4;
+}
+
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #4070f4;
+    padding: 3px;
+}
+
+.card-image .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070f4;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333
+}
+
+.description {
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+
+.button {
+    width: 170px;
+    height: 60px;
+    background-color:greenyellow;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button *{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.button a {
+    color: dodgerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.button div {
+    background-color: dodgerblue;
+    transform: translateX(-170px);
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover div {
+    transform: translateX(0);
+}
+
+.button:hover a {
+    color: greenyellow;
+   
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+.container {
+    box-sizing: border-box;
+    max-width: 1170px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    padding-inline: 160px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #4070f4;
+    max-width: 1170px;
+    height: 1000px;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 25px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: greenyellow;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px; 
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: greenyellow;
+    background-color: #ffffff;
+}
+
+/* responsive */
+@media(max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px){
+    .footer-col{
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+
+<div class="terms-container" onclick="this.remove()">
+    <div class="terms-box">
+        <div class="terms-text">
+            <h2>Terms of Service</h2>
+            <p>Last Edit: 04/08/2023</p>
+            <p>Leggere attentamente per ulteriori chiarimenti.</p>
+            <p>Cari Users,</p>
+            <p>In questo sito ci occupiano del futuro di giovani ragazzi/e con la passione di sviluppatori,
+                forniamo tantissimi progetti gratis utili per allenarsi e per fare più pratica nell'ambito
+                del coding.
+            </p>
+            <p>Assicurare la protezione e la privacy al nostro pubblico per noi è una delle cose più importanti,
+                infatti vi invitiamo a contattarci in caso di inconvenienti non desiderati. <a href="order.html">Contattaci</a>.
+            </p>
+            <p>Un servizio importantissimo che offriamo e che rende partecipi e protagonisti anche voi, è quello 
+                di una community pensata apposta per tutti coloro che vogliono mostrare il proprio talento attraverso
+                i propri progetti, vi invitiamo ad iscrivervi: entra a far parte della nostra <a href="https://discord.gg/tTeAZca9" _blank>community</a>
+            </p>
+            <p>Se ti piace il nostro lavoro e non vuoi perderti tutti i nuovi progetti ti consigliamo di iscriverti 
+                al nostro canale YouTube: <a href="https://www.youtube.com/channel/UCfV2x8-AjZRpK74NnHZj-IQ">Iscriviti</a>.
+            </p>
+            <p>Nella sezione order presente alla fine della pagina è possibile inviarci un messaggio con l'oggetto
+                del prossimo progetto, in poche parole se hai bisogno di qualcosa facci tranquillamente sapere,
+                siamo qui apposta.
+            </p>
+            <h4>I Agree to the <span>Terms of Service</span> and I read the Privacy Notice.</h4>
+            <div class="buttons">
+                    <button class="btn blue-btn">Accept</button>
+                    <button class="btn gray-btn">Decline</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cookie" onclick="this.remove()">
+    <div class="wrapper">
+        <header>
+            <i class="bx bx-cookie"></i>
+            <h2>Cookies Consent</h2>
+        </header>
+
+            <div class="data">
+                <p>This website use cookies to help you have a superior and more relevant browsing experience on the website. <a href="#">Read more...</a></p>
+            </div>
+        <div class="but-cookies">
+            <span id="cookie_stop">
+                <button class="but-cookie">
+                    Accept
+                </button>
+            </span>
+            <span id="cookie_stop">
+                <button class="but-cookie"> 
+                    Decline 
+                </button>
+            </span> 
+        </div>
+    </div>
+</div>
+
+    <div class="main-container">
+        <div class="menu">
+            <div class="logo">
+                <div class="view">
+                    <a href="index.html"><img src="logo.jpg" width="5%"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="panel">
+            <div class="container-2">
+               <p class="watch fade-in intro">Design</p>
+                    <div class="img-container">
+                        <img src="logo.jpg" alt="" class="img-big-left">
+                    </div>
+                <h2 class="watch fade-in title-big">Impara a <br/>
+                programmare.</h2>
+                    <div class="container-but">
+                        <div id="button">
+                            <div></div>
+                            <a href="index.html">Learn HTML</a>
+                        </div>            
+                    </div>
+            </div>
+        </div>
+    <div class="contenitore" id="column">
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                <img src="logo.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">G10ELS</h2>
+                                <p class="description"><b>Game Canvas!</b> Guarda il <br>
+                                nuovo progetto e fammi <br>
+                                sapere cosa ne pensi.
+                                </p>
+
+                                <div class="container-but">
+                                    <div class="button">
+                                        <div></div>
+                                        <a href="https://github.com/G10ELS?tab=repositories">View More</a>
+                                    </div>            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="contenitore" id="column">
+        <div class="slide-container">
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                            <img src="logo.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">G10ELS</h2>
+                            <p class="description"><b>Tris-Tac-Toe!</b> Guarda il <br>
+                             nuovo progetto e fammi <br>
+                             sapere cosa ne pensi.
+                            </p>
+
+                            <div class="container-but">
+                                <div class="button">
+                                    <div></div>
+                                    <a href="https://github.com/G10ELS?tab=repositories">View More</a>
+                                </div>            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenitore" id="column">
+        <div class="slide-container">
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                            <img src="logo.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h2 class="name">G10ELS</h2>
+                            <p class="description"><b>Gallery!</b> Guarda il <br>
+                             nuovo progetto e fammi <br>
+                             sapere cosa ne pensi.
+                            </p>
+
+                            <div class="container-but">
+                                <div class="button">
+                                    <div></div>
+                                    <a href="https://github.com/G10ELS?tab=repositories">View More</a>
+                                </div>            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="index.html">about us</a></li>
+                        <li><a href="#column">our services</a></li>
+                        <li><a href="index.html">privacy policy</a></li>
+                        <li><a href="index.html">cookies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="FAQ.html">FAQ</a></li>
+                        <li><a href="https://github.com/G10ELS">source code</a></li>
+                        <li><a href="order.html">order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/gio._.elee/"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UCfV2x8-AjZRpK74NnHZj-IQ"><i class="fab fa-youtube"></i></a>
+                            <a href="https://github.com/G10ELS"><i class="fab fa-github"></i></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

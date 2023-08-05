@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+    
+    .main-contenitore {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #EFEFEF;
+    }
+
+    .container-1 {
+        margin: 0 40px;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container-1 h1 {
+        color: #333;
+    }
+
+    .container-1 .tab {
+        position: relative;
+        background: #FFF;
+        padding: 0 20px 20px;
+        box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .container-1 .tab input {
+        appearance: none;
+    }
+
+    .container-1 .tab label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .container-1 .tab label::after {
+        content: '+';
+        position: absolute;
+        right: 20px;
+        font-size: 2em;
+        color: rgba(0,0,0,0.1);
+        transition: transform 1s;
+    }
+
+    .container-1 .tab:hover label::after {
+        color: #333;
+    }
+
+    .container-1 .tab input:checked ~ label::after {
+        transform: rotate(135deg);
+        color: #FFF;
+    }
+
+    .container-1 .tab label h2 {
+        width: 40px;
+        height: 40px;
+        background: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        font-size: 1.25em;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .container-1 .tab input:checked ~ label h2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: rgba(255,255,255,0.2);
+        font-size: 8em;
+        justify-content: flex-end;
+        padding: 20px;
+    }
+
+    .container-1 .tab:nth-child(2) label h2 {
+        background: linear-gradient(135deg,#70f570,#49c628);
+    }
+    
+    .container-1 .tab:nth-child(3) label h2 {
+        background: linear-gradient(135deg,#3cBce7,#00eaff);
+    }
+
+    .container-1 .tab:nth-child(4) label h2 {
+        background: linear-gradient(135deg,#ff96f9,#c32bac);
+    }
+
+    .container-1 .tab:nth-child(5) label h2 {
+        background: linear-gradient(135deg,#fd6e6a,#ffc600);
+    }
+
+    .container-1 .tab label h3 {
+        position: relative;
+        font-weight: 500;
+        color: #333;
+        z-index: 10;
+    }
+
+    .container-1 .tab input:checked ~ label h3 {
+        background: #FFF;
+        padding: 2px 10px;
+        color: #333;
+        border-radius: 2px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .container-1 .tab .content {
+        max-height: 0;
+        transition: 1s;
+        overflow: hidden;
+    }
+
+    .container-1 .tab input:checked ~ .content {
+        max-height: 100vh;
+    }
+
+    .container-1 .tab .content p {
+        position: relative;
+        padding: 10px 0;
+        color: #333;
+        z-index: 10;
+    }
+
+    .container-1 .tab input:checked ~ .content p {
+        color: #FFF;
+    }
+    </style>
+</head>
+<body>
+    <div class="main-contenitore">
+        <div class="container-1">
+            <h1 class="FAQ">Frequently asked questions?</h1>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc1">
+                <label for="acc1">
+                    <h2>01</h2>
+                    <h3>How do I applay?</h3>
+                </label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit, amet consectetur 
+                        adipisicing elit. Totam quasi magnam, 
+                        provident eos fugit, aliquam pariatur 
+                        nesciunt, corrupti libero nobis explicabo 
+                        amet distinctio! Assumenda nisi architecto,
+                        provident a quo aliquid.
+                    </p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc2">
+                <label for="acc2">
+                    <h2>02</h2>
+                    <h3>How I watch your projects?</h3>
+                </label>
+                <div class="content">
+                    <p>Lorem, ipsum dolor sit amet consectetur 
+                        adipisicing elit. Exercitationem deleniti
+                        eveniet facere quo maiores debitis dolorum 
+                        doloremque id molestiae eligendi. Impedit 
+                        quisquam itaque exercitationem ea placeat 
+                        doloribus? Laboriosam, iusto amet.
+                    </p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc3">
+                <label for="acc3">
+                    <h2>03</h2>
+                    <h3>How can I make a change to your projects?</h3>
+                </label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Deserunt ad cupiditate 
+                        quisquam accusamus! Quis soluta exercitationem 
+                        tempora non a quidem iusto nam officia est, 
+                        ducimus vel ullam, possimus perferendis 
+                        provident?
+                    </p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name="acc" id="acc4">
+                <label for="acc4">
+                    <h2>04</h2>
+                    <h3>How can I update my name?</h3>
+                </label>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit, amet consectetur 
+                        adipisicing elit. Dignissimos ducimus 
+                        exercitationem accusamus qui aliquam suscipit 
+                        veniam quaerat, sunt soluta nisi laborum nam 
+                        ullam placeat sint harum magni reprehenderit 
+                        hic maxime?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
